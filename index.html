@@ -34,13 +34,13 @@ overflow: hidden; */
 </head>
 <body>
 <div id="app">
-  <g-button  :icon-position="iconPosition"  :icon="icon" >按钮</g-button>
-  <g-button  :icon-position="iconPosition"  :icon="icon" >按钮</g-button>
-  <g-button  :icon-position="iconPosition"  :icon="icon" >按钮</g-button>
-  <g-icon name="loading"></g-icon>
+  <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
+  <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
+  <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
+  <g-icon name="right"></g-icon>
 </div>
 <script src="./node_modules/vue/dist/vue.min.js"></script>
 <script src="./app.js"></script>
-<script src="//at.alicdn.com/t/font_1740695_qt6nn7cdt8s.js"></script>
+<script src="//at.alicdn.com/t/font_1740695_85iuoo76sf.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@ new Vue({
     el: '#app',
     data: {
         icon:"setting",
-        iconPosition:"right"
+        iconPosition:"right",
+        loading:true
     }
 });
