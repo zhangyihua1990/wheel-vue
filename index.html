@@ -12,10 +12,19 @@
 </head>
 <body>
 <div id="app">
-  <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
-  <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
-  <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
-  <g-button-group>
+  <div style="margin: 10px">
+    <g-input value="二麻" disabled></g-input>
+    <g-input value="张三" readonly></g-input>
+    <g-input value="李四"></g-input>
+    <g-input value="王五" error="请输入正确字符"></g-input>
+    <g-input value="赵六" @change="handleChange" @input="handleInput" @focus="handleFocus" @blur="handleBlur"></g-input>
+  </div>
+  <div style="margin: 10px">
+    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
+    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
+    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
+  </div>
+  <g-button-group style="margin: 10px">
     <g-button icon="left">上一页</g-button>
     <g-button>更多</g-button>
     <g-button icon="right" icon-position="right">下一页</g-button>
@@ -23,6 +32,6 @@
 </div>
 <script src="./node_modules/vue/dist/vue.min.js"></script>
 <script src="./app.js"></script>
-<script src="//at.alicdn.com/t/font_1740695_85iuoo76sf.js"></script>
+<script src="//at.alicdn.com/t/font_1740695_3zqfz6u7fda.js"></script>
 </body>
 </html>
