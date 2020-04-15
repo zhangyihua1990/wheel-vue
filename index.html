@@ -8,22 +8,21 @@
     * {margin: 0;padding: 0;box-sizing: border-box;}
     :root {--button-height: 32px;--font-size: 14px;--button-bg: white;--button-active-bg: #eee;--border-radius: 4px;--color: #333;--border-color: #999;--border-color-hover: #666;}
   </style>
-  <style> .icon {width: 1em;height: 1em; /* vertical-align: -0.15em; fill: currentColor; overflow: hidden; */}</style>
-
+  
 </head>
 <body>
 <div id="app">
-  <div style="border: 1px solid black">
+  <div style="border: 1px solid black;overflow: hidden;">
     <g-row gutter="20">
-      <g-col>1</g-col>
-      <g-col>2</g-col>
+      <g-col span="2" :phone="{span:23,offset:50}" :ipad="{span:8}" :narrow-pc="{span:4}" :pc="{span:2}" :wide-pc="{span:1}"></g-col>
+      <g-col span="20" :phone="{span:1,offset:10}" :ipad="{span:16}" :narrow-pc="{span:20}" :pc="{span:22}" :wide-pc="{span:23}"></g-col>
     </g-row>
-    <g-row>
-      <g-col span="6">1</g-col>
-      <g-col span="8">2</g-col>
-      <g-col span="8" offset="2">3</g-col>
+    <g-row gutter="60">
+      <g-col span="6" :phone="{span:8}">1</g-col>
+      <g-col span="8" :phone="{span:8}">2</g-col>
+      <g-col span="10" :phone="{span:8}">3</g-col>
     </g-row>
-    <g-row>
+    <g-row gutter="100">
       <g-col span="6">1</g-col>
       <g-col span="6">2</g-col>
       <g-col span="6">3</g-col>
@@ -34,8 +33,7 @@
       <g-col span="22">11</g-col>
     </g-row>
   </div>
-  <hr>
-  <div style="margin: 10px">
+  <hr> <div style="margin: 10px">
     <g-input value="二麻" disabled></g-input>
     <g-input value="张三" readonly></g-input>
     <g-input value="李四"></g-input>

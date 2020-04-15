@@ -4,7 +4,7 @@
 
 ## 安装
 
-使用本框架前，请在 css 中开启 border-box
+1. 使用本框架前，请在 css 中开启 border-box
 
 ```css
 * {
@@ -12,4 +12,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+ ```
+ 2. 最外层包裹标签设置隐藏属性
+ ```
+ div{
+ overflow:hidden;
+ }
  ```
