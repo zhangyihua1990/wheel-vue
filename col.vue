@@ -30,19 +30,86 @@
           return valid;
         },
       },
+      ipad: {
+        type: Object,
+        validator(value) {
+          let keys = Object.keys(value);
+          let valid = true;
+          keys.forEach(key => {
+            if (!['span', 'offset'].includes(key)) {
+              valid = false;
+            }
+          });
+          return valid;
+        },
+      },
+      narrowPc: {
+        type: Object,
+        validator(value) {
+          let keys = Object.keys(value);
+          let valid = true;
+          keys.forEach(key => {
+            if (!['span', 'offset'].includes(key)) {
+              valid = false;
+            }
+          });
+          return valid;
+        },
+      },
+      pc: {
+        type: Object,
+        validator(value) {
+          let keys = Object.keys(value);
+          let valid = true;
+          keys.forEach(key => {
+            if (!['span', 'offset'].includes(key)) {
+              valid = false;
+            }
+          });
+          return valid;
+        },
+      },
+      widePc: {
+        type: Object,
+        validator(value) {
+          let keys = Object.keys(value);
+          let valid = true;
+          keys.forEach(key => {
+            if (!['span', 'offset'].includes(key)) {
+              valid = false;
+            }
+          });
+          return valid;
+        },
+      },
+    },
+    methods: {
+      createClasses(obj, str = '') {
+        if (!obj) {return [];}
+        let arr = [];
+        if (obj.span) {
+          arr.push(`col-${str}${obj.span}`);
+        }
+        if (obj.offset) {
+          arr.push(`offset-${str}${obj.offset}`);
+        }
+        return arr;
+      },
     },
     computed: {
       colStyle() {
         return {paddingLeft: this.gutter / 2 + 'px', paddingRight: this.gutter / 2 + 'px'};
       },
       colClass() {
-        if(!this.phone){
-          this.phone = []
-        }
+        let {span, offset, phone, ipad, narrowPc, pc, widePc} = this;
+        let createClasses = this.createClasses;
         return [
-          this.span && `col-${this.span}`,
-          this.offset && `offset-${this.offset}`,
-          ... (this.phone && [`col-phone-${this.phone.span}`])
+          ...createClasses({span, offset}),
+          ...createClasses(phone, 'phone-'),
+          ...createClasses(ipad, 'ipad-'),
+          ...createClasses(narrowPc, 'narrowPc-'),
+          ...createClasses(pc, 'pc-'),
+          ...createClasses(widePc, 'widePc-'),
         ];
       },
     },
