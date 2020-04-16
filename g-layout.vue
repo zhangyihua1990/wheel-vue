@@ -1,18 +1,37 @@
 <template>
-  <div class="g-layout">
+  <div class="g-layout" :class="layoutClass">
     <slot></slot>
   </div>
 </template>
 
 <script>
-  export default {};
+  export default {
+    name: 'Wheel-layout',
+    data: function () {
+      return {
+        layoutClass: {
+          hasSider: false,
+        },
+      };
+    },
+    mounted() {
+      this.$children.forEach((vm) => {
+        if (vm.$options.name === 'wheel-sider') {
+          this.layoutClass.hasSider = true;
+        }
+      });
+    },
+  };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .g-layout {
-    height: 100vh;
     border: 1px solid red;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
   }
+  .hasSider {
+    flex-direction: row;
+  }
+ 
 </style>
