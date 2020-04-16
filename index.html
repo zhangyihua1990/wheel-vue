@@ -8,33 +8,62 @@
     * {margin: 0;padding: 0;box-sizing: border-box;}
     :root {--button-height: 32px;--font-size: 14px;--button-bg: white;--button-active-bg: #eee;--border-radius: 4px;--color: #333;--border-color: #999;--border-color-hover: #666;}
   </style>
-  <style>
+  <style lang="scss">
     /*.rowAndCol {border: 1px solid black;overflow: hidden;}*/
     .demo {
       background: #ddd;
       border: 1px solid #666;
       min-height: 100px;
     }
+    .g-sider {
+      background: #666;
+      width: 200px;
+    }
+    .g-header {
+      background: #999;
+     height: 100px;
+    }
+    .g-footer {
+      background: #ccc;
+     height: 50px;
+    }
   </style>
 </head>
 <body>
 <div id="app">
   <g-layout style="height:100vh">
-    <g-header class="demo">
-      header
-    </g-header>
+    <g-sider class="demo">
+      sider
+    </g-sider>
     <g-layout>
+      <g-header class="demo">
+        header
+      </g-header>
       <g-content class="demo">
         content
       </g-content>
-      <g-sider class="demo">
-        sider
-      </g-sider>
+      <g-footer class="demo">
+        footer
+      </g-footer>
     </g-layout>
-    <g-footer class="demo">
-      footer
-    </g-footer>
   </g-layout>
+  
+  <!--  <g-layout style="height:100vh">-->
+  <!--    <g-header class="demo">-->
+  <!--      header-->
+  <!--    </g-header>-->
+  <!--    <g-layout>-->
+  <!--      <g-content class="demo">-->
+  <!--        content-->
+  <!--      </g-content>-->
+  <!--      <g-sider class="demo">-->
+  <!--        sider-->
+  <!--      </g-sider>-->
+  <!--    </g-layout>-->
+  <!--    <g-footer class="demo">-->
+  <!--      footer-->
+  <!--    </g-footer>-->
+  <!--  </g-layout>-->
   
   <!--  <g-layout>-->
   <!--    <g-header class="demo">-->

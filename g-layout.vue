@@ -26,6 +26,7 @@
 
 <style lang="scss" scoped>
   .g-layout {
+    flex-grow:1;
     border: 1px solid red;
     display: flex;
     flex-direction: column;
