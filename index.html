@@ -8,48 +8,54 @@
     * {margin: 0;padding: 0;box-sizing: border-box;}
     :root {--button-height: 32px;--font-size: 14px;--button-bg: white;--button-active-bg: #eee;--border-radius: 4px;--color: #333;--border-color: #999;--border-color-hover: #666;}
   </style>
-  
+  <style>
+    /*.rowAndCol {border: 1px solid black;overflow: hidden;}*/
+    .demo {
+      background: #ddd;
+      border: 1px solid #666;
+      min-height: 100px;
+    }
+  </style>
 </head>
 <body>
 <div id="app">
-  <div style="border: 1px solid black;overflow: hidden;">
-    <g-row gutter="20">
-      <g-col span="2" :phone="{span:23,offset:50}" :ipad="{span:8}" :narrow-pc="{span:4}" :pc="{span:2}" ></g-col>
-      <g-col span="20" :phone="{span:1,offset:10}" :ipad="{span:16}" :narrow-pc="{span:20}" :pc="{span:22}" ></g-col>
-    </g-row>
-<!--    <g-row gutter="60">-->
-<!--      <g-col span="6" :phone="{span:8}">1</g-col>-->
-<!--      <g-col span="8" :phone="{span:8}">2</g-col>-->
-<!--      <g-col span="10" :phone="{span:8}">3</g-col>-->
-<!--    </g-row>-->
-<!--    <g-row gutter="100">-->
-<!--      <g-col span="6">1</g-col>-->
-<!--      <g-col span="6">2</g-col>-->
-<!--      <g-col span="6">3</g-col>-->
-<!--      <g-col span="6">4</g-col>-->
-<!--    </g-row>-->
-<!--    <g-row>-->
-<!--      <g-col span="2">1</g-col>-->
-<!--      <g-col span="22">11</g-col>-->
-<!--    </g-row>-->
-  </div>
-  <hr> <div style="margin: 10px">
-    <g-input value="二麻" disabled></g-input>
-    <g-input value="张三" readonly></g-input>
-    <g-input value="李四"></g-input>
-    <g-input value="王五" error="请输入正确字符"></g-input>
-    <g-input value="赵六" @change="handleChange" @input="handleInput" @focus="handleFocus" @blur="handleBlur"></g-input>
-  </div>
-  <div style="margin: 10px">
-    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
-    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
-    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>
-  </div>
-  <g-button-group style="margin: 10px">
-    <g-button icon="left">上一页</g-button>
-    <g-button>更多</g-button>
-    <g-button icon="right" icon-position="right">下一页</g-button>
-  </g-button-group>
+  <g-layout>
+    <g-header class="demo">
+      header
+    </g-header>
+    <g-content class="demo">
+      content
+    </g-content>
+    <g-footer class="demo">
+      footer
+    </g-footer>
+  </g-layout>
+  
+  <!--  <hr>-->
+  <!--  <div class="rowAndCol">-->
+  <!--    <g-row gutter="20">-->
+  <!--      <g-col span="2" :phone="{span:23,offset:50}" :ipad="{span:8}" :narrow-pc="{span:4}" :pc="{span:2}" ></g-col>-->
+  <!--      <g-col span="20" :phone="{span:1,offset:10}" :ipad="{span:16}" :narrow-pc="{span:20}" :pc="{span:22}" ></g-col>-->
+  <!--    </g-row>-->
+  <!--  </div>-->
+  <!--  -->
+  <!--  <hr> <div style="margin: 10px">-->
+  <!--    <g-input value="二麻" disabled></g-input>-->
+  <!--    <g-input value="张三" readonly></g-input>-->
+  <!--    <g-input value="李四"></g-input>-->
+  <!--    <g-input value="王五" error="请输入正确字符"></g-input>-->
+  <!--    <g-input value="赵六" @change="handleChange" @input="handleInput" @focus="handleFocus" @blur="handleBlur"></g-input>-->
+  <!--  </div>-->
+  <!--  <div style="margin: 10px">-->
+  <!--    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>-->
+  <!--    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>-->
+  <!--    <g-button :icon-position="iconPosition" :icon="icon" :loading="loading" @click="loading=!loading">按钮</g-button>-->
+  <!--  </div>-->
+  <!--  <g-button-group style="margin: 10px">-->
+  <!--    <g-button icon="left">上一页</g-button>-->
+  <!--    <g-button>更多</g-button>-->
+  <!--    <g-button icon="right" icon-position="right">下一页</g-button>-->
+  <!--  </g-button-group>-->
 </div>
 
 <script src="./node_modules/vue/dist/vue.min.js"></script>
