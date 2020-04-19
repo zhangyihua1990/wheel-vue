@@ -43,7 +43,7 @@ new Vue({
     showToast() {
       this.$toast('钱包充值！', {
         propsData: {
-          position: 'bottom',
+          position: 'middle',
           enableHtml: false,
           closeButton: {
             text: '已充值',
@@ -52,7 +52,7 @@ new Vue({
             },
           },
           autoClose: true,
-          autoCloseDelay: 1,
+          autoCloseDelay: 1000,
         },
       });
     },
