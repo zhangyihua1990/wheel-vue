@@ -40,7 +40,7 @@ new Vue({
   },
   methods: {
     showToast() {
-      this.$toast('hello everyone', {
+      this.$toast('hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone ', {
         propsData: {
           closeButton: {
             text: '知道了',
