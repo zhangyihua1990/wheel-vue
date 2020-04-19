@@ -18,11 +18,11 @@
     props: {
       autoClose: {
         type: Boolean,
-        default: true,
+        default: false,
       },
       autoCloseDelay: {
         type: Number,
-        default: 5000,
+        default: 3,
       },
       closeButton: {
         type: Object,
@@ -37,6 +37,13 @@
         type: Boolean,
         default: false,
       },
+      position: {
+        type: String,
+        default: 'top',
+        validator(value){
+          return ['top', 'bottom', 'middle'].indexOf(value) >= 0
+        }
+      }
     },
     mounted() {
       this.execAutoClose();

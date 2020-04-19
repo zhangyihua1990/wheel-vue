@@ -37,17 +37,22 @@ new Vue({
     loading: true,
   },
   created() {
+
   },
   methods: {
     showToast() {
-      this.$toast('hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone hello everyone ', {
+      this.$toast('钱包充值！', {
         propsData: {
+          position: 'bottom',
+          enableHtml: false,
           closeButton: {
-            text: '知道了',
+            text: '已充值',
             callback() {
-              console.log('用户已知');
+              console.log('回调');
             },
           },
+          autoClose: true,
+          autoCloseDelay: 1,
         },
       });
     },
