@@ -11,6 +11,5 @@
 
 <style scoped>
   .g-header {
-  
   }
 </style>

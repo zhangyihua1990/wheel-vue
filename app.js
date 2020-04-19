@@ -10,6 +10,8 @@ import Header from './g-header';
 import Content from './g-content';
 import Footer from './g-footer';
 import Sider from './g-sider';
+import Toast from './toast';
+import plugin from './plugin';
 
 Vue.component('g-icon', gIcon);
 Vue.component('g-button', gButton);
@@ -22,6 +24,10 @@ Vue.component('g-header', Header);
 Vue.component('g-content', Content);
 Vue.component('g-footer', Footer);
 Vue.component('g-sider', Sider);
+Vue.component('toast', Toast);
+
+Vue.use(plugin);
+
 
 new Vue({
   el: '#app',
@@ -30,19 +36,33 @@ new Vue({
     iconPosition: 'right',
     loading: true,
   },
+  created() {
+  },
   methods: {
-    handleChange(e) {
-      console.log(e);
+    showToast() {
+      this.$toast('hello everyone', {
+        propsData: {
+          closeButton: {
+            text: '知道了',
+            callback() {
+              console.log('用户已知');
+            },
+          },
+        },
+      });
     },
-    handleInput(e) {
-      console.log(e)
-    },
-    handleBlur(e) {
-      console.log(e);
-    },
-    handleFocus(e) {
-      console.log(e);
-    }
+    // handleChange(e) {
+    //   console.log(e);
+    // },
+    // handleInput(e) {
+    //   console.log(e)
+    // },
+    // handleBlur(e) {
+    //   console.log(e);
+    // },
+    // handleFocus(e) {
+    //   console.log(e);
+    // }
   },
 
 });
