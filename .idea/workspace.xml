@@ -27,8 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede955b8-57a4-46f2-b87f-3a0d8bb628d7" name="Default Changelist" comment="重构row和col组件">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/toast.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

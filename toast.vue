@@ -61,7 +61,6 @@
         this.$nextTick(() => {
           this.$refs.line.style.height = `${this.$refs.wrapper.getBoundingClientRect().height}px`;
         });
-        a;
       },
       execAutoClose() {
         if (this.autoClose) {
