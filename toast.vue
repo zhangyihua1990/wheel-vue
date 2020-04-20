@@ -1,12 +1,14 @@
 <template>
-  <div :class="toastClassed" class="toast" ref="wrapper">
-    <div class="message">
-      <slot v-if="!enableHtml"></slot>
-      <div v-else v-html="$slots.default[0]"></div>
-    </div>
-    <div class="line" ref="line">
-      <div class="close" v-if="closeButton" @click="onClickClose">
-        {{closeButton.text}}
+  <div class="wrapper" :class="toastClassed">
+    <div class="toast" ref="toast">
+      <div class="message">
+        <slot v-if="!enableHtml"></slot>
+        <div v-else v-html="$slots.default[0]"></div>
+      </div>
+      <div class="line" ref="line">
+        <div class="close" v-if="closeButton" @click="onClickClose">
+          {{closeButton.text}}
+        </div>
       </div>
     </div>
   </div>
@@ -59,7 +61,7 @@
     methods: {
       updateStyles() {
         this.$nextTick(() => {
-          this.$refs.line.style.height = `${this.$refs.wrapper.getBoundingClientRect().height}px`;
+          this.$refs.line.style.height = `${this.$refs.toast.getBoundingClientRect().height}px`;
         });
       },
       execAutoClose() {
@@ -72,7 +74,7 @@
       close() {
         this.$el.remove();
         //必须在remove之后，destroy 之前
-        this.$emit('close')
+        this.$emit('close');
         this.$destroy();
       },
       onClickClose() {
@@ -93,46 +95,44 @@
     0% {opacity: 0; transform: translateY(100%)}
     100% {opacity: 1;transform: translateY(0%)}
   }
-  .toast {
-    animation: fade-in 1s;
-    font-size: $font-size;
-    line-height: 1.8;
-    min-height: $toast-min-height;
+  .wrapper {
     position: fixed;
-    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    color: white;
-    background: $toast-bg;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
-    padding: 0 16px;
-    &.message {
-      padding: 8px 0;
-    }
     &.position-top {
       top: 0;
-      transform: translateX(-50%);
     }
     &.position-middle {
       top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%) translateY(-50%);
     }
     &.position-bottom {
       bottom: 0;
-      transform: translateX(-50%);
+    }
+    .toast {
+      animation: fade-in 1s;
+      font-size: $font-size;
+      line-height: 1.8;
+      min-height: $toast-min-height;
+      display: flex;
+      align-items: center;
+      color: white;
+      background: $toast-bg;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
+      padding: 0 16px;
+      &.message {
+        padding: 8px 0;
+      }
+    }
+    .line {
+      border-left: 1px solid #666;
+      margin-left: 16px;
+      display: flex;
+      align-items: center;
+      .close {
+        padding-left: 16px;
+        white-space: nowrap;
+      }
     }
   }
-  .line {
-    border-left: 1px solid #666;
-    margin-left: 16px;
-    display: flex;
-    align-items: center;
-    .close {
-      padding-left: 16px;
-      white-space: nowrap;
-    }
-  }
-
 </style>

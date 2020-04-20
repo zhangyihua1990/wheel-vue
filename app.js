@@ -42,14 +42,12 @@ new Vue({
   methods: {
     showToast() {
       this.$toast('钱包充值！', {
-        propsData: {
-          position: 'middle',
-          enableHtml: false,
-          closeButton: {
-            text: '已充值',
-            callback() {
-              console.log('回调');
-            },
+        position: 'middle',
+        enableHtml: false,
+        closeButton: {
+          text: '已充值',
+          callback() {
+            console.log('回调');
           },
           autoClose: true,
           autoCloseDelay: 1000,
