@@ -71,6 +71,8 @@
       },
       close() {
         this.$el.remove();
+        //必须在remove之后，destroy 之前
+        this.$emit('close')
         this.$destroy();
       },
       onClickClose() {
