@@ -44,9 +44,10 @@ Vue.component('g-tabs-pane', TabsPane);
 new Vue({
   el: '#app',
   data: {
-    icon: 'setting',
-    iconPosition: 'right',
-    loading: true,
+    // icon: 'setting',
+    // iconPosition: 'right',
+    // loading: true,
+    selectedTab: 'sports'
   },
   created() {
 

@@ -7,6 +7,12 @@
 <script>
   export default {
     name: 'wheel-item',
+    props:{
+      disabled:{
+        type: Boolean,
+        default: false
+      }
+    }
   };
 </script>
 
