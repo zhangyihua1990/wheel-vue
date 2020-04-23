@@ -14,13 +14,11 @@
 </script>
 
 <style scoped lang="scss">
-  $tab-height: 40px;
   .tabs-head {
     border: 1px solid red;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: $tab-height;
     .actions-wrapper {
       margin-left: auto;
     }

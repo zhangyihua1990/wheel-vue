@@ -44,9 +44,15 @@
 </script>
 
 <style scoped lang="scss">
+  $tab-height: 40px;
   .tabs-item {
-    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: $tab-height;
     padding: 0 1em;
+    flex-shrink: 0;
+    border: 1px solid green;
+    cursor:pointer;
     &.active {
       background: red;
     }
