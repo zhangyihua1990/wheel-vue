@@ -23,7 +23,7 @@ export default {
         message,
         propsData: options,
         onClose: () => {
-          console.log('onClose');
+          // console.log('onClose');
           currentToast = null;
         },
       });

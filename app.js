@@ -60,7 +60,7 @@ new Vue({
         closeButton: {
           text: '已充值',
           callback() {
-            console.log('回调');
+            // console.log('回调');
           },
           autoClose: true,
           autoCloseDelay: 1000,

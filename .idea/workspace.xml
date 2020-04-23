@@ -29,9 +29,12 @@
     <list default="true" id="ede955b8-57a4-46f2-b87f-3a0d8bb628d7" name="Default Changelist" comment="重构row和col组件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/g-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/g-header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/icon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs-head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabs-head.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabs-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs-pane.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabs-pane.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabs.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +95,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -172,25 +176,25 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1586785491508" />
-    <state x="143" y="66" key="SettingsEditor" timestamp="1587537346327">
+    <state x="144" y="77" key="SettingsEditor" timestamp="1587631088049">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="143" y="66" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1587537346327" />
+    <state x="144" y="77" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1587631088049" />
     <state x="507" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586785216231">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="507" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1586785216231" />
-    <state x="421" y="202" width="598" height="518" key="find.popup" timestamp="1586851921142">
+    <state x="421" y="202" width="598" height="550" key="find.popup" timestamp="1587629040421">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="421" y="202" width="598" height="518" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1586851921142" />
+    <state x="421" y="202" width="598" height="550" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1587629040421" />
     <state x="385" y="211" key="run.anything.popup" timestamp="1586785222019">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="211" key="run.anything.popup/0.23.1440.877@0.23.1440.877" timestamp="1586785222019" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1587349178238">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1587628929582">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1587349178238" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1587628929582" />
   </component>
 </project>
