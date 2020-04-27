@@ -12,11 +12,11 @@ import Footer from './g-footer';
 import Sider from './g-sider';
 import Toast from './toast';
 import plugin from './plugin';
-import Tabs from './tabs'
-import TabsHead from './tabs-head'
-import TabsBody from './tabs-body'
-import TabsItem from './tabs-item'
-import TabsPane from './tabs-pane'
+import Tabs from './tabs';
+import TabsHead from './tabs-head';
+import TabsBody from './tabs-body';
+import TabsItem from './tabs-item';
+import TabsPane from './tabs-pane';
 
 Vue.component('g-icon', gIcon);
 Vue.component('g-button', gButton);
@@ -47,10 +47,10 @@ new Vue({
     // icon: 'setting',
     // iconPosition: 'right',
     // loading: true,
-    selectedTab: 'sports'
+    selectedTab: 'sports',
   },
   created() {
-
+    // setTimeout(() => {console.log(this.selectedTab);}, 1000);
   },
   methods: {
     showToast() {

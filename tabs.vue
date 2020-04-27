@@ -1,5 +1,6 @@
 <template>
   <div class="tabs">
+    {{selected}}
     <slot></slot>
   </div>
 </template>
@@ -32,8 +33,21 @@
         eventBus: this.eventBus,
       };
     },
-    created() {
-      // this.$emit('update:selected', 'xxx');
+    mounted() {
+      this.$emit('update:selected', "finance");
+      console.log('this.selected的值');
+      console.log(this.selected);
+      // console.log(this.children);
+      // this.$children.forEach((vm) => {
+      //   if (vm.$options.name === 'wheel-head') {
+      //     vm.$children.forEach((childVm) => {
+      //       if (childVm.$options.name === 'wheel-item' && childVm.name === this.selected) {
+      //         console.log(childVm);
+      //         // this.eventBus.$emit('update:selected', this.selected,childVm);
+      //       }
+      //     });
+      //   }
+      // });
     },
   };
 </script>

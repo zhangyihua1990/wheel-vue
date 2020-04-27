@@ -37,7 +37,7 @@
     },
     methods: {
       xxx() {
-        this.eventBus.$emit('update:selected', this.name);
+        this.eventBus.$emit('update:selected', this.name,this);
       },
     },
   };
@@ -45,16 +45,17 @@
 
 <style scoped lang="scss">
   $tab-height: 40px;
+  $fontColor: blue;
   .tabs-item {
     display: flex;
     align-items: center;
     height: $tab-height;
     padding: 0 1em;
     flex-shrink: 0;
-    border: 1px solid green;
-    cursor:pointer;
+    cursor: pointer;
     &.active {
-      background: red;
+      color: $fontColor;
+      font-weight: bold;
     }
   }
 </style>
