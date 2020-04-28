@@ -20,11 +20,9 @@
       })
     },
     created() {
-      // this.$emit('update:selected',()=>{})
       this.eventBus.$on('update:selected', (item, vm) => {
         console.log(item);
         console.log(vm);
-        // console.log(vm.$el.getBoundingClientRect());
       });
     },
   };
@@ -46,6 +44,7 @@
     }
     > .actions-wrapper {
       margin-left: auto;
+      padding: 0 1em;
     }
   }
 </style>
