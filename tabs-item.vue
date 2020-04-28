@@ -50,7 +50,7 @@
 <style scoped lang="scss">
   $tab-height: 40px;
   $fontColor: blue;
-  $disabled-text-color:grey;
+  $disabled-text-color: grey;
   .tabs-item {
     display: flex;
     align-items: center;
@@ -64,6 +64,7 @@
     }
     &.disabled {
       color: $disabled-text-color;
+      cursor: not-allowed;
     }
   }
 </style>
