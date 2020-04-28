@@ -1,6 +1,6 @@
 <template>
   <div class="popover" @click="xxx">
-    <div class="content-wrapper" v-if="visable">
+    <div class="content-wrapper" v-if="visable" @click.stop>
       <slot name="content"></slot>
     </div>
     <slot></slot>
@@ -17,13 +17,23 @@
     },
     methods: {
       xxx() {
-        this.visable = !this.visable;
+        if (this.visable === false) {
+          this.visable = true;
+          setTimeout(() => {
+            let eventHandler = () => {
+              console.log(1);
+              this.visable = false;
+              document.removeEventListener('click', eventHandler);
+            };
+            document.addEventListener('click', eventHandler);
+          }, 0);
+        }
       },
     },
   };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .popover {
     display: inline-block;
     vertical-align: top;
