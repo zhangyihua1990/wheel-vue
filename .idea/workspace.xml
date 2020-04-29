@@ -27,7 +27,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede955b8-57a4-46f2-b87f-3a0d8bb628d7" name="Default Changelist" comment="重构row和col组件">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/popover.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,10 +152,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="重构row和col组件" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="109" key="#Plugins" timestamp="1587537251194">
+    <state x="320" y="109" key="#Plugins" timestamp="1588142501852">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="109" key="#Plugins/0.23.1440.877@0.23.1440.877" timestamp="1587537251194" />
+    <state x="320" y="109" key="#Plugins/0.23.1440.877@0.23.1440.877" timestamp="1588142501852" />
     <state x="476" y="184" key="#TODO" timestamp="1586785126657">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
