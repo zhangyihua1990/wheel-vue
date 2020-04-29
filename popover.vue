@@ -3,7 +3,7 @@
     <div class="content-wrapper" ref="contentWrapper" v-if="visable" @click.stop>
       <slot name="content"></slot>
     </div>
-    <span ref="trigger">
+    <span ref="triggerWrapper">
      <slot></slot>
     </span>
   </div>
@@ -18,7 +18,7 @@
       };
     },
     mounted() {
-      // console.log(this.$refs.trigger);
+      // console.log(this.$refs.triggerWrapper);
       // console.log(this.$refs.contentWrapper);
     },
     methods: {
@@ -30,10 +30,10 @@
             document.removeEventListener('click', eventHandler);
           };
           setTimeout(() => {
-            let {width, height, top, left} = this.$refs.trigger.getBoundingClientRect();
+            let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect();
             document.body.appendChild(this.$refs.contentWrapper);
-            this.$refs.contentWrapper.style.left = left + 'px';
-            this.$refs.contentWrapper.style.top = top + 'px';
+            this.$refs.contentWrapper.style.left = left + window.scrollX + 'px';
+            this.$refs.contentWrapper.style.top = top + window.scrollY + 'px';
             document.addEventListener('click', eventHandler);
           }, 0);
         }
