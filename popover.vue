@@ -1,6 +1,6 @@
 <template>
-  <div class="popover" @click="xxx">
-    <div class="content-wrapper" ref="contentWrapper" v-if="visable" @click.stop>
+  <div class="popover" @click="onClick">
+    <div class="content-wrapper" ref="contentWrapper" v-if="visable">
       <slot name="content"></slot>
     </div>
     <span ref="triggerWrapper">
@@ -22,20 +22,25 @@
       // console.log(this.$refs.contentWrapper);
     },
     methods: {
-      xxx() {
-        if (this.visable === false) {
+      onClick(event) {
+        if (this.$refs.triggerWrapper.contains(event.target)) {
           this.visable = true;
-          let eventHandler = () => {
-            this.visable = false;
-            document.removeEventListener('click', eventHandler);
+          let eventHandler = (e) => {
+            if (this.$refs.contentWrapper.contains(e.target)) {
+            } else {
+              this.visable = false;
+              document.removeEventListener('click', eventHandler);
+            }
           };
           setTimeout(() => {
             let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect();
-            document.body.appendChild(this.$refs.contentWrapper);
             this.$refs.contentWrapper.style.left = left + window.scrollX + 'px';
             this.$refs.contentWrapper.style.top = top + window.scrollY + 'px';
+            document.body.appendChild(this.$refs.contentWrapper);
             document.addEventListener('click', eventHandler);
           }, 0);
+        } else {
+          console.log('上面');
         }
       },
     },
