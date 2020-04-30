@@ -27,6 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede955b8-57a4-46f2-b87f-3a0d8bb628d7" name="Default Changelist" comment="重构row和col组件">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/popover.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,10 +181,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="421" y="202" width="598" height="550" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1587812853330" />
-    <state x="385" y="211" key="run.anything.popup" timestamp="1588064708672">
+    <state x="385" y="211" width="670" height="675" key="run.anything.popup" timestamp="1588230553721">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="211" key="run.anything.popup/0.23.1440.877@0.23.1440.877" timestamp="1588064708672" />
+    <state x="385" y="211" width="670" height="675" key="run.anything.popup/0.23.1440.877@0.23.1440.877" timestamp="1588230553721" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1587628929582">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

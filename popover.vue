@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="onClick">
+  <div class="popover" @click="onClick" ref="popover">
     <div class="content-wrapper" ref="contentWrapper" v-if="visable">
       <slot name="content"></slot>
     </div>
@@ -22,25 +22,32 @@
       // console.log(this.$refs.contentWrapper);
     },
     methods: {
+      positionContent() {
+        let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect();
+        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px';
+        this.$refs.contentWrapper.style.top = top + window.scrollY + 'px';
+      },
+      listenToDocument: function () {
+        let eventHandler = (e) => {
+          console.log(this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target)));
+          if (!this.$refs.contentWrapper.contains(e.target)) {
+            this.visable = false;
+            document.removeEventListener('click', eventHandler);
+          }
+        };
+        document.body.appendChild(this.$refs.contentWrapper);
+        document.addEventListener('click', eventHandler);
+      },
+      onShow() {
+        setTimeout(() => {
+          this.positionContent();
+          this.listenToDocument();
+        }, 0);
+      },
       onClick(event) {
         if (this.$refs.triggerWrapper.contains(event.target)) {
           this.visable = true;
-          let eventHandler = (e) => {
-            if (this.$refs.contentWrapper.contains(e.target)) {
-            } else {
-              this.visable = false;
-              document.removeEventListener('click', eventHandler);
-            }
-          };
-          setTimeout(() => {
-            let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect();
-            this.$refs.contentWrapper.style.left = left + window.scrollX + 'px';
-            this.$refs.contentWrapper.style.top = top + window.scrollY + 'px';
-            document.body.appendChild(this.$refs.contentWrapper);
-            document.addEventListener('click', eventHandler);
-          }, 0);
-        } else {
-          console.log('上面');
+          this.onShow();
         }
       },
     },
