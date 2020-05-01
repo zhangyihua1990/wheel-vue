@@ -21,33 +21,39 @@
       // console.log(this.$refs.triggerWrapper);
       // console.log(this.$refs.contentWrapper);
     },
+
     methods: {
+      onClickDocument(e) {
+        if (this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {
+          return;
+        }
+        this.close();
+      },
       positionContent() {
+        document.body.appendChild(this.$refs.contentWrapper);
         let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect();
         this.$refs.contentWrapper.style.left = left + window.scrollX + 'px';
         this.$refs.contentWrapper.style.top = top + window.scrollY + 'px';
       },
-      listenToDocument: function () {
-        let eventHandler = (e) => {
-          console.log(this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target)));
-          if (!this.$refs.contentWrapper.contains(e.target)) {
-            this.visable = false;
-            document.removeEventListener('click', eventHandler);
-          }
-        };
-        document.body.appendChild(this.$refs.contentWrapper);
-        document.addEventListener('click', eventHandler);
-      },
-      onShow() {
+      open() {
+        this.visable = true;
         setTimeout(() => {
           this.positionContent();
-          this.listenToDocument();
+          document.addEventListener('click', this.onClickDocument);
         }, 0);
+      },
+      close() {
+        this.visible = false;
+        document.body.removeChild(this.$refs.contentWrapper);
+        document.removeEventListener('click', this.onClickDocument);
       },
       onClick(event) {
         if (this.$refs.triggerWrapper.contains(event.target)) {
-          this.visable = true;
-          this.onShow();
+          if (this.visible === true) {
+            this.close();
+          } else {
+            this.open();
+          }
         }
       },
     },
@@ -70,3 +76,4 @@
     transform: translateY(-100%);
   }
 </style>
+
