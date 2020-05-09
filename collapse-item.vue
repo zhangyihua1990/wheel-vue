@@ -1,5 +1,5 @@
 <template>
-  <div class="collapseItem" @click="open = !open">
+  <div class="collapseItem" @click="toggle">
     <div class="title">
       {{title}}
     </div>
@@ -23,6 +23,27 @@
         required: true,
       },
     },
+    methods: {
+      toggle() {
+        if (this.open) {
+          this.open = false;
+        } else {
+          this.open = true;
+          this.eventBus && this.eventBus.$emit('update:selected', this);
+        }
+      },
+      close() {
+        this.open = false;
+      },
+    },
+    mounted() {
+      this.eventBus && this.eventBus.$on('update:selected', (vm) => {
+        if (vm !== this) {
+          this.close();
+        }
+      });
+    },
+    inject: ['eventBus'],
   };
 </script>
 
@@ -49,8 +70,8 @@
         border-top-right-radius: $border-radius;
       }
     }
-    &:last-child{
-      > .title:last-child{
+    &:last-child {
+      > .title:last-child {
         border-bottom: none;
         border-bottom-left-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
