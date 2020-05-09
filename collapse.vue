@@ -19,6 +19,9 @@
         type: Boolean,
         default: false,
       },
+      selected: {
+        type: String,
+      },
     },
     provide() {
       if (this.single) {
@@ -26,6 +29,9 @@
           eventBus: this.eventBus,
         };
       }
+    },
+    mounted() {
+      this.eventBus.$emit('update:selected', this.selected);
     },
   };
 </script>
