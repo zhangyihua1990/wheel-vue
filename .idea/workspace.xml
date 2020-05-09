@@ -110,7 +110,7 @@
       <workItem from="1586826889871" duration="14504000" />
       <workItem from="1586931509257" duration="9688000" />
       <workItem from="1588946033133" duration="119000" />
-      <workItem from="1588946185798" duration="12298000" />
+      <workItem from="1588946185798" duration="14576000" />
     </task>
     <task id="LOCAL-00001" summary="重构row和col组件">
       <created>1586785191358</created>
@@ -182,10 +182,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="144" y="77" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588060525680" />
-    <state x="78" y="153" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588235638880">
+    <state x="78" y="153" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589009410297">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="78" y="153" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1588235638880" />
+    <state x="78" y="153" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1589009410297" />
     <state x="507" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586785216231">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

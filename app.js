@@ -54,6 +54,7 @@ new Vue({
     // iconPosition: 'right',
     // loading: true,
     selectedTab: 'sports',
+    selectedNameTab: '1'
   },
   created() {
     // setTimeout(() => {console.log(this.selectedTab);}, 1000);
