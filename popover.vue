@@ -3,7 +3,7 @@
     <div class="content-wrapper" ref="contentWrapper" v-if="visable">
       <slot name="content"></slot>
     </div>
-    <span ref="triggerWrapper">
+    <span ref="triggerWrapper" style="display: inline-block;">
      <slot></slot>
     </span>
   </div>
