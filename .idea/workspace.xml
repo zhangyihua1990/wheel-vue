@@ -27,7 +27,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede955b8-57a4-46f2-b87f-3a0d8bb628d7" name="Default Changelist" comment="重构row和col组件">
-      <change beforePath="$PROJECT_DIR$/popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/popover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collapse-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/collapse-item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/collapse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +79,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -87,7 +92,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -110,7 +118,14 @@
       <workItem from="1586826889871" duration="14504000" />
       <workItem from="1586931509257" duration="9688000" />
       <workItem from="1588946033133" duration="119000" />
-      <workItem from="1588946185798" duration="14576000" />
+      <workItem from="1588946185798" duration="17782000" />
+      <workItem from="1589076306107" duration="220000" />
+      <workItem from="1589085828154" duration="152000" />
+      <workItem from="1589087657120" duration="568000" />
+      <workItem from="1589088247546" duration="133000" />
+      <workItem from="1589088397748" duration="336000" />
+      <workItem from="1589088763214" duration="9077000" />
+      <workItem from="1589169741198" duration="10147000" />
     </task>
     <task id="LOCAL-00001" summary="重构row和col组件">
       <created>1586785191358</created>
@@ -154,10 +169,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="重构row和col组件" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="600" y="305" key="#Notifications" timestamp="1588946229050">
+    <state x="600" y="305" key="#Notifications" timestamp="1589169789598">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="600" y="305" key="#Notifications/0.23.1440.877@0.23.1440.877" timestamp="1588946229050" />
+    <state x="600" y="305" key="#Notifications/0.23.1440.877@0.23.1440.877" timestamp="1589169789598" />
     <state x="320" y="109" key="#Plugins" timestamp="1588946257141">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -178,10 +193,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1586785491508" />
-    <state x="144" y="77" key="SettingsEditor" timestamp="1588060525680">
+    <state x="330" y="41" key="SettingsEditor" timestamp="1589169779394">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="144" y="77" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588060525680" />
+    <state x="330" y="41" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1589169779394" />
+    <state width="251" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1589167119857">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="251" height="200" key="ShowFilterAction_Filter_Popup/0.23.1440.877@0.23.1440.877" timestamp="1589167119857" />
     <state x="78" y="153" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589009410297">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -190,17 +209,17 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="507" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1586785216231" />
-    <state x="421" y="202" width="598" height="550" key="find.popup" timestamp="1587812853330">
+    <state x="421" y="202" width="598" height="550" key="find.popup" timestamp="1589180556112">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="421" y="202" width="598" height="550" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1587812853330" />
+    <state x="421" y="202" width="598" height="550" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1589180556112" />
     <state x="385" y="211" width="670" height="675" key="run.anything.popup" timestamp="1588230553721">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="211" width="670" height="675" key="run.anything.popup/0.23.1440.877@0.23.1440.877" timestamp="1588230553721" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1587628929582">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1589167140737">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1587628929582" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1589167140737" />
   </component>
 </project>

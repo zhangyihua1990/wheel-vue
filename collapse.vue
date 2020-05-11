@@ -8,10 +8,11 @@
   import Vue from 'vue';
 
   export default {
-    name: 'wheel-collapse.vue',
+    name: 'wheel-collapse',
     data() {
       return {
         eventBus: new Vue(),
+        selectedCopy: this.selected
       };
     },
     props: {
@@ -20,19 +21,32 @@
         default: false,
       },
       selected: {
-        type: String,
+        type: Array,
+        default: []
       },
     },
     provide() {
-      if (this.single) {
-        return {
-          eventBus: this.eventBus,
-        };
-      }
+      return {
+        eventBus: this.eventBus,
+      };
     },
     mounted() {
-      this.eventBus.$emit('update:selected', this.selected);
-      this.eventBus.$on('update:selected', (name) => { this.$emit('update:selected', name);});
+      this.eventBus.$emit('update:selected', this.selectedCopy)
+      this.eventBus.$on('update:addSelected', (name) => {
+        if (this.single) {
+          this.selectedCopy = [name]
+        } else {
+          this.selectedCopy.push(name)
+        }
+        this.eventBus.$emit('update:selected', this.selectedCopy)
+        this.$emit('update:selected', this.selectedCopy)
+      })
+      this.eventBus.$on('update:removeSelected', (name) => {
+        let index = this.selectedCopy.indexOf(name)
+        this.selectedCopy.splice(index, 1)
+        this.eventBus.$emit('update:selected', this.selectedCopy)
+        this.$emit('update:selected', this.selectedCopy)
+      })
 
     },
   };
